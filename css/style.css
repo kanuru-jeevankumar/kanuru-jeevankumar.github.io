@@ -9795,6 +9795,403 @@ textarea.form-control {
   }
 }
 
+/* =========================================================
+   EXPERIENCE PHOTO CARDS, LINKEDIN CTA AND MOTION
+   ========================================================= */
+
+.linkedin-nav {
+  color: #0a66c2 !important;
+  font-weight: 700 !important;
+}
+
+.linkedin-nav:hover {
+  color: #58a6ff !important;
+}
+
+.btn-linkedin {
+  margin-left: 8px;
+  border: 1px solid #0a66c2;
+  background: #0a66c2;
+  color: #ffffff !important;
+}
+
+.btn-linkedin:hover {
+  border-color: #084f96;
+  background: #084f96;
+  color: #ffffff !important;
+  transform: translateY(-3px);
+}
+
+.hero .btn {
+  transition: transform 0.25s ease, box-shadow 0.25s ease,
+    background-color 0.25s ease;
+}
+
+.hero .btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.25);
+}
+
+.experience-section {
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 8% 15%, rgba(255, 189, 57, 0.08), transparent 28%),
+    #000000;
+}
+
+.experience-photo-card {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(320px, 0.88fr) minmax(0, 1.12fr);
+  min-height: 610px;
+  margin-bottom: 70px;
+  overflow: hidden;
+  background: #111111;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  box-shadow: 0 24px 70px rgba(0, 0, 0, 0.45);
+  transition: transform 0.4s ease, border-color 0.4s ease,
+    box-shadow 0.4s ease;
+}
+
+.experience-photo-card:hover {
+  transform: translateY(-10px);
+  border-color: rgba(255, 189, 57, 0.55);
+  box-shadow: 0 32px 80px rgba(0, 0, 0, 0.58);
+}
+
+.experience-reverse .experience-photo {
+  order: 2;
+}
+
+.experience-reverse .experience-details {
+  order: 1;
+}
+
+.experience-photo {
+  position: relative;
+  min-height: 610px;
+  overflow: hidden;
+  background: linear-gradient(145deg, #1c1c1c, #080808);
+}
+
+.experience-photo::before {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  content: "";
+  pointer-events: none;
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0.08) 35%,
+    rgba(0, 0, 0, 0.88) 100%
+  );
+}
+
+.experience-photo::after {
+  position: absolute;
+  inset: 14px;
+  z-index: 3;
+  content: "";
+  pointer-events: none;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: 7px;
+}
+
+.experience-photo.image-missing::before {
+  z-index: 1;
+  display: grid;
+  place-items: center;
+  padding: 45px;
+  color: #8d8d8d;
+  content: "Add the company experience photo in the images folder";
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-align: center;
+}
+
+.experience-photo img {
+  width: 100%;
+  height: 100%;
+  min-height: 610px;
+  object-fit: cover;
+  object-position: center;
+  transition: transform 0.8s cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+
+.experience-photo-card:hover .experience-photo img {
+  transform: scale(1.065);
+}
+
+.experience-photo-overlay {
+  position: absolute;
+  right: 40px;
+  bottom: 42px;
+  left: 40px;
+  z-index: 4;
+}
+
+.experience-photo-overlay span {
+  display: inline-block;
+  margin-bottom: 12px;
+  padding: 7px 11px;
+  background: #ffbd39;
+  color: #111111;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.experience-photo-overlay h3 {
+  margin: 0 0 5px;
+  color: #ffffff;
+  font-size: clamp(34px, 4vw, 54px);
+  font-weight: 800;
+  letter-spacing: -0.04em;
+}
+
+.experience-photo-overlay p {
+  margin: 0;
+  color: #d1d1d1;
+  font-size: 15px;
+}
+
+.experience-details {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: clamp(35px, 5vw, 65px);
+}
+
+.experience-number {
+  position: absolute;
+  top: 25px;
+  right: 30px;
+  color: rgba(255, 189, 57, 0.12);
+  font-size: 84px;
+  font-weight: 900;
+  line-height: 1;
+}
+
+.experience-period {
+  margin-bottom: 10px;
+  color: #ffbd39;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.11em;
+}
+
+.experience-details > h3 {
+  max-width: 620px;
+  margin-bottom: 20px;
+  color: #ffffff;
+  font-size: clamp(26px, 3vw, 40px);
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.experience-summary {
+  margin-bottom: 23px;
+  color: #b8b8b8;
+  font-size: 15px;
+  line-height: 1.75;
+}
+
+.experience-details h4 {
+  margin: 0 0 14px;
+  color: #ffffff;
+  font-size: 17px;
+}
+
+.experience-details ul {
+  margin: 0 0 25px;
+  padding: 0;
+  list-style: none;
+}
+
+.experience-details li {
+  position: relative;
+  margin-bottom: 10px;
+  padding-left: 23px;
+  color: #a8a8a8;
+  font-size: 13px;
+  line-height: 1.65;
+}
+
+.experience-details li::before {
+  position: absolute;
+  top: 8px;
+  left: 0;
+  width: 8px;
+  height: 8px;
+  content: "";
+  background: #ffbd39;
+  border-radius: 50%;
+  box-shadow: 0 0 0 5px rgba(255, 189, 57, 0.1);
+}
+
+.experience-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.experience-tags span {
+  padding: 7px 11px;
+  color: #d7d7d7;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 100px;
+  transition: border-color 0.25s ease, color 0.25s ease,
+    background-color 0.25s ease;
+}
+
+.experience-photo-card:hover .experience-tags span {
+  border-color: rgba(255, 189, 57, 0.35);
+}
+
+.experience-tags span:hover {
+  background: #ffbd39;
+  border-color: #ffbd39 !important;
+  color: #111111;
+}
+
+/* Attractive but lightweight entrance animations. */
+.hero .subheading {
+  animation: portfolioFadeUp 0.7s ease both;
+}
+
+.hero h1 {
+  animation: portfolioFadeUp 0.8s 0.12s ease both;
+}
+
+.hero h2 {
+  animation: portfolioFadeUp 0.8s 0.24s ease both;
+}
+
+.hero .text > p {
+  animation: portfolioFadeUp 0.8s 0.36s ease both;
+}
+
+.navbar-brand {
+  animation: portfolioPulse 3.2s ease-in-out infinite;
+}
+
+.recognition-card,
+.experience-photo-card {
+  animation: portfolioReveal 0.8s ease both;
+}
+
+.recognition-card:nth-child(2),
+.experience-photo-card:nth-of-type(2) {
+  animation-delay: 0.12s;
+}
+
+.recognition-card:nth-child(3),
+.experience-photo-card:nth-of-type(3) {
+  animation-delay: 0.24s;
+}
+
+@keyframes portfolioFadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(28px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes portfolioReveal {
+  from {
+    opacity: 0;
+    transform: translateY(45px) scale(0.985);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes portfolioPulse {
+  0%,
+  100% {
+    text-shadow: 0 0 0 rgba(255, 189, 57, 0);
+  }
+  50% {
+    text-shadow: 0 0 22px rgba(255, 189, 57, 0.55);
+  }
+}
+
+@media (max-width: 991.98px) {
+  .btn-linkedin {
+    margin-top: 10px;
+    margin-left: 0;
+  }
+
+  .experience-photo-card {
+    grid-template-columns: 1fr;
+  }
+
+  .experience-reverse .experience-photo,
+  .experience-reverse .experience-details {
+    order: initial;
+  }
+
+  .experience-photo,
+  .experience-photo img {
+    min-height: 520px;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .experience-photo-card {
+    margin-bottom: 45px;
+  }
+
+  .experience-photo,
+  .experience-photo img {
+    min-height: 430px;
+  }
+
+  .experience-photo-overlay {
+    right: 25px;
+    bottom: 28px;
+    left: 25px;
+  }
+
+  .experience-details {
+    padding: 35px 25px;
+  }
+
+  .experience-number {
+    top: 18px;
+    right: 18px;
+    font-size: 60px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
 @media (max-width: 767.98px) {
   .recognition-image {
     height: 430px;
